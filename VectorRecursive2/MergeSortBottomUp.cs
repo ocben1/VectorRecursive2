@@ -6,7 +6,8 @@ namespace Vector
     public class MergeSortBottomUp : ISorter
     {
         /*Merge-sort contents of array sequence. BottomUp MergeSort adapted from pg 543 Data Structures and Algorithms
-         in Java 6th Edition*/
+         in Java 6th Edition
+         NOTE: Array.Copy method has been used here instead of Take & Skip*/
         public void Sort<K>(K[] sequence, IComparer<K> comparer) where K : IComparable<K>
         {
             if (comparer == null) comparer = Comparer<K>.Default;

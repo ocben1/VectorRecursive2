@@ -20,14 +20,11 @@ namespace Vector
             // Partition
             K[] leftSequence = new K[n/2];
             K[] rightSequence = new K[n/2];
-            /***TO DO: Partition using Array.Copy method?? Alternatively, could use two separate for loops to
-             * copy elements [0] to [mid] to left sequence, then [mid+1] to [n] to right sequence***/
-            //Array.Copy(sequence, 0, leftSequence, 0, mid);
-            //Array.Copy(sequence, mid, rightSequence, 0, n);
 
-            /**USING LINQ library. Method does the same job as 'Arrays.CopyOfRange' Java method
-            from pg. 538 of textbook.
-            Reference: https://stackoverflow.com/questions/21269727/how-to-convert-java-arrays-copyofrange-function-to-c**/
+            /**USING LINQ library. Methods Take, Skip and ToArray do the same job as 'Arrays.CopyOfRange' Java method
+            from pg. 538 of Data Structures and Algorithms in Java 6th Edition.
+            Reference: https://stackoverflow.com/questions/21269727/how-to-convert-java-arrays-copyofrange-function-to-c/
+            **/
             leftSequence = sequence.Take(mid).ToArray(); // TAKEs first half of sequence copying into left sequence
             rightSequence = sequence.Skip(mid).ToArray(); // SKIPS the first half of sequence, copying second half of sequence into right sequence
 
