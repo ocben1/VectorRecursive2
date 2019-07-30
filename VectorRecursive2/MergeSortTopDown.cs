@@ -11,22 +11,24 @@ namespace Vector
         public void Sort<K>(K[] sequence, IComparer<K> comparer) where K : IComparable<K>
         {
             if (comparer == null) comparer = Comparer<K>.Default;
-            int n = sequence.Length;
+            int n = sequence.Length; //number of elements
 
             if (n < 2) return; // if there are only 0 or 1 elements, array is trivially sorted
-            int mid = n / 2;
+            int mid = n / 2; //midpoint
 
             // Partition
-            K[] leftSequence = new K[n / 2];
-            K[] rightSequence = new K[n / 2];
-            /***TO DO: Partition using Array.Copy method??***/
+            K[] leftSequence = new K[n/2];
+            K[] rightSequence = new K[n/2];
+            /***TO DO: Partition using Array.Copy method?? Alternatively, could use two separate for loops to
+             * copy elements [0] to [mid] to left sequence, then [mid+1] to [n] to right sequence***/
             //Array.Copy(sequence, 0, leftSequence, 0, mid);
             //Array.Copy(sequence, mid, rightSequence, 0, n);
 
-            /**USING LINQ library. Method is as close as I could find to the 'Arrays.CopyOfRange' Java equivalent
-            //from pg. 538 of textbook.**/
-            leftSequence = sequence.Take(n / 2).ToArray(); // copy first half of sequence into left sequence using LINQ
-            rightSequence = sequence.Skip(n / 2).ToArray(); // copy second half of sequence into right sequence using LINQ
+            /**USING LINQ library. Method does the same job as 'Arrays.CopyOfRange' Java method
+            from pg. 538 of textbook.
+            Reference: https://stackoverflow.com/questions/21269727/how-to-convert-java-arrays-copyofrange-function-to-c**/
+            leftSequence = sequence.Take(mid).ToArray(); // TAKEs first half of sequence copying into left sequence
+            rightSequence = sequence.Skip(mid).ToArray(); // SKIPS the first half of sequence, copying second half of sequence into right sequence
 
             // Recursion
             Sort(leftSequence, comparer); // sort copy of first half

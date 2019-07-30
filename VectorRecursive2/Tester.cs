@@ -192,65 +192,65 @@ namespace Vector
 
             // ------------------ MergeSortBottomUp ----------------------------------
 
-            //try
-            //{
-            //    Console.WriteLine("\nTest G: Sort integer numbers applying MergeSortBottomUp with AscendingIntComparer: ");
-            //    vector = new Vector<int>(problem_size);
-            //    vector.Sorter = new MergeSortBottomUp();
-            //    for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
-            //    Console.WriteLine("Intital data: " + vector.ToString());
-            //    vector.Sort(new AscendingIntComparer());
-            //    Console.WriteLine("Resulting order: " + vector.ToString());
-            //    if (!CheckAscending(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
-            //    Console.WriteLine(" :: SUCCESS");
-            //    result = result + "G";
-            //}
-            //catch (Exception exception)
-            //{
-            //    Console.WriteLine(" :: FAIL");
-            //    Console.WriteLine(exception.ToString());
-            //    result = result + "-";
-            //}
+            try
+            {
+                Console.WriteLine("\nTest G: Sort integer numbers applying MergeSortBottomUp with AscendingIntComparer: ");
+                vector = new Vector<int>(problem_size);
+                vector.Sorter = new MergeSortBottomUp();
+                for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
+                Console.WriteLine("Intital data: " + vector.ToString());
+                vector.Sort(new AscendingIntComparer());
+                Console.WriteLine("Resulting order: " + vector.ToString());
+                if (!CheckAscending(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
+                Console.WriteLine(" :: SUCCESS");
+                result = result + "G";
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(" :: FAIL");
+                Console.WriteLine(exception.ToString());
+                result = result + "-";
+            }
 
-            //try
-            //{
-            //    Console.WriteLine("\nTest H: Sort integer numbers applying MergeSortBottomUp with DescendingIntComparer: ");
-            //    vector = new Vector<int>(problem_size);
-            //    vector.Sorter = new MergeSortBottomUp();
-            //    for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
-            //    Console.WriteLine("Intital data: " + vector.ToString());
-            //    vector.Sort(new DescendingIntComparer());
-            //    Console.WriteLine("Resulting order: " + vector.ToString());
-            //    if (!CheckDescending(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
-            //    Console.WriteLine(" :: SUCCESS");
-            //    result = result + "H";
-            //}
-            //catch (Exception exception)
-            //{
-            //    Console.WriteLine(" :: FAIL");
-            //    Console.WriteLine(exception.ToString());
-            //    result = result + "-";
-            //}
+            try
+            {
+                Console.WriteLine("\nTest H: Sort integer numbers applying MergeSortBottomUp with DescendingIntComparer: ");
+                vector = new Vector<int>(problem_size);
+                vector.Sorter = new MergeSortBottomUp();
+                for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
+                Console.WriteLine("Intital data: " + vector.ToString());
+                vector.Sort(new DescendingIntComparer());
+                Console.WriteLine("Resulting order: " + vector.ToString());
+                if (!CheckDescending(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
+                Console.WriteLine(" :: SUCCESS");
+                result = result + "H";
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(" :: FAIL");
+                Console.WriteLine(exception.ToString());
+                result = result + "-";
+            }
 
-            //try
-            //{
-            //    Console.WriteLine("\nTest I: Sort integer numbers applying MergeSortBottomUp with EvenNumberFirstComparer: ");
-            //    vector = new Vector<int>(problem_size);
-            //    vector.Sorter = new MergeSortBottomUp();
-            //    for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
-            //    Console.WriteLine("Intital data: " + vector.ToString());
-            //    vector.Sort(new EvenNumberFirstComparer());
-            //    Console.WriteLine("Resulting order: " + vector.ToString());
-            //    if (!CheckEvenNumberFirst(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
-            //    Console.WriteLine(" :: SUCCESS");
-            //    result = result + "I";
-            //}
-            //catch (Exception exception)
-            //{
-            //    Console.WriteLine(" :: FAIL");
-            //    Console.WriteLine(exception.ToString());
-            //    result = result + "-";
-            //}
+            try
+            {
+                Console.WriteLine("\nTest I: Sort integer numbers applying MergeSortBottomUp with EvenNumberFirstComparer: ");
+                vector = new Vector<int>(problem_size);
+                vector.Sorter = new MergeSortBottomUp();
+                for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
+                Console.WriteLine("Intital data: " + vector.ToString());
+                vector.Sort(new EvenNumberFirstComparer());
+                Console.WriteLine("Resulting order: " + vector.ToString());
+                if (!CheckEvenNumberFirst(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
+                Console.WriteLine(" :: SUCCESS");
+                result = result + "I";
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(" :: FAIL");
+                Console.WriteLine(exception.ToString());
+                result = result + "-";
+            }
 
             Console.WriteLine("\n\n ------------------- SUMMARY ------------------- ");
             Console.WriteLine("Tests passed: " + result);
