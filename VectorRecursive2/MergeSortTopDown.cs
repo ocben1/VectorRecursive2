@@ -7,7 +7,8 @@ namespace Vector
 {
     public class MergeSortTopDown : ISorter
     {
-        //Merge-sort contents of array sequence. The conventional MergeSort.
+        /*Merge-sort contents of array sequence. The conventional MergeSort. Data Structures and Algorithms
+         in Java 6th Edition*/
         public void Sort<K>(K[] sequence, IComparer<K> comparer) where K : IComparable<K>
         {
             if (comparer == null) comparer = Comparer<K>.Default;
